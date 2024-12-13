@@ -1,0 +1,227 @@
+
+{
+ 
+    "language":"Language",
+    "good morning":"Good morning",
+    "good afternoon":"Good afternoon",
+    "good evening":"Good evening",
+
+    "Accounts": "Account",
+    "Credit":"Credit",
+    "Credit account":"Credit account",
+    "Active":"Active",
+    "Current balance":"Current balance",
+    "Amount to be paid":"Amount to be paid",
+    "Weeks to be paid":"Weeks to be paid",
+    "Balance":"Balance",
+
+    "See all transactions":"See all transactions",
+    "Deposit":"Deposit",
+    "Funding":"Funding",
+    "pending":"pending",
+    "complete":"complete",
+
+    "All transactions":"All transactions",
+    "Search":"Search",
+
+    "Account details":"Account details",
+    "Minimum deposit":"Minimum deposit",
+    "Next deposit date":"Next deposit date",
+    "Deposit terms":"Deposit terms",
+    "Total weeks":"Total weeks",
+    "Weeks deposited":"Weeks deposited",
+    "Remaining weeks":"Remaining weeks",
+    "Interest":"interest",
+    "Account number":"Account number",
+    "Weekly":"Weekly",
+
+    "Home":"Home",
+    "My account":"My account",
+    "Sign out": "Sign out",
+
+    "Manage account":"Manage account",
+    "Manage deposit":"Manage deposit",
+    "Change language":"Change language",
+    "Terms and policy":"Terms and policy",
+    "Contact us":"Contact us",
+    "I need help":"I need help",
+
+
+    "Credentials":"Credentials",
+    "Company profile":"Company profile",
+    "Location":"Location",
+    "Contact":"Contact",
+    "Profile":"Profile",
+    "Edit / Delete":"Edit / Delete",
+    "Select service":"Select service",
+    "Deposit Method":"Deposit Method",
+    "Notifications":"Notifications",
+    "Deposit accounts":"Deposit accounts",
+
+    "January": "January",
+    "February": "February",
+    "March": "March",
+    "April": "April",
+    "May": "May",
+    "June": "June",
+    "July": "July",
+    "August": "August",
+    "September": "September",
+    "October": "October",
+    "November": "November",
+    "December": "December",
+
+    "Jan": "Jan",
+    "Feb": "Feb",
+    "Mar": "Mar",
+    "Apr": "Apr",   
+    "Jun": "Jun",
+    "Jul": "Jul",
+    "Aug": "Aug",
+    "Sep": "Sep",
+    "Oct": "Oct",
+    "Nov": "Nov",
+    "Dec": "Dec",
+
+    "Default":"Default",
+    "Next":"Next",
+    "Insert deposit amount!":"Insert deposit amount!",
+    "Deposit details":"Deposit details",
+    "Deposit amount":"Deposit amount",
+    "Deposited from":"Deposited from",
+    "Deposit date":"Deposit date",
+    "You will receive a text message from your mobile wallet service to confirm the transacrion in order for the deposit to be completed.":"You will receive a text message from your mobile wallet service to confirm the transacrion in order for the deposit to be completed.",
+    "Notice":"Notice",
+    "Make deposit":"Make deposit",
+    "Cancel":"Cancel",
+    "Processing...":"Processing...",
+    "Your":"Your",
+    "is now being deposit":"is now being deposit",
+    "Done":"Done",
+    "Amount":"Amount",
+    "Service":"Service",
+    "Date":"Date",
+    "Select":"Select",
+    "Service wallet":"Service wallet",
+
+    "service type":"Service type",
+    "Service name":"Service name",
+    "Mobile account number":"Mobile account number",
+    "Save":"Save",
+    "Mobile wallet":"Mobile wallet",
+    "Insert mobile account number!":"Insert mobile account number!",
+    "Add new account":"Add new account",
+    "You can only add up to 3 different accounts. Use settings to edit or delete.":"You can only add up to 3 different accounts. Use settings to edit or delete.",
+    "You can only add up to 3 different accounts.":"You can only add up to 3 different accounts.",
+    
+    "First name":"First name",
+    "Middle name":"Middle name",
+    "Last name":"Last name",
+    "Date of birth":"Date of birth",
+    "Primary phone number":"Primary phone number",
+    "Secondary phone number":"Secondary phone number",
+    "Other phone number":"Other phone number",
+    "Email":"Email",
+    "Country":"Country",
+    "Province / State":"Province / State",
+    "City":"City",
+    "Address":"Address",
+    "Company name":"Company name",
+    "Year of starting":"Year of starting",
+    "Business type":"Business type",
+    "Username":"Username",
+    "Change password":"Change password",
+    "Languages":"Languages",
+    "English":"English",
+    "Portuguese":"Portuguese",
+    "Macua (Mozambique)":"Macua (Mozambique)",
+
+    "New language settings will apply next time you restart the app.":"New language settings will apply next time you restart the app.",
+    "Close app now":"Close app now",
+    "Ok":"Ok",
+    "YYYY-MM-DD":"MM-DD-YYYY",
+    "Year-Month-Day":"Month-Day-Year",
+    "Week past due":"Week past due",
+    "Weeks past due":"Weeks past due",
+    "Week paid ahead":"Week paid ahead",
+    "Weeks paid ahead":"Weeks paid ahead",
+
+    "Retail":"Retail sales",
+    "Gross": "Gross sales",
+    "Paid":"Paid",
+    "Not paid":"Not paid",
+    "Make payment":"Make payment",
+     "Payments":"Payments",
+     "Payment":"Payment",
+     "Pay loan":"Pay loan",
+     "New funding":"New funding",
+
+     "Settings":"Settings",
+     "Business loan":"Business loan",
+     "Transactions method":"Transactions method",
+     "Delete":"Delete",
+     "Edit":"Edit",
+     "Manage transactions":"Manage Transactions",
+     "Card service":"Card service",
+     "Bank transfer":"Bank transfer",
+     "Check balance":"Check balance",
+     "See all payments":"See all payments",
+     "Pay":"Pay",
+     "Help":"Help",
+
+     "Payment confirmation":"Payment confirmation",
+     "Friendly Reminder":"Friendly Reminder",
+     "1st Overdue Reminder":"1st Overdue Reminder",
+     "2nd Overdue Reminder":"2nd Overdue Reminder",
+
+     "View account details":"View account details",
+
+     "Hello":"Hello",
+     "Thank you":"Thank you",
+     "MM/DD/YY":"MM/DD/YY",
+     "MM/DD/YYYY":"MM/DD/YYYY",
+
+     "Today":"Today",
+     "Yesterday":"Yesterday",
+     "Monday":"Monday",
+     "Tuesday":"Tuesday",
+     "Wedneday":"Wedneday",
+     "Thurday":"Thurday",
+     "Friday":"Friday",
+     "Saturday":"Saturday",
+     "Sunday":"Sunday",
+    
+
+
+     "can I see my balance?🤓":"can I see my balance?🤓",
+     "Sure! Here are the details for your account:":"Sure! Here are the details for your account:",
+     "I'd like to make next payment.🤑":"I'd like to make next payment.🤑",
+     "Sounds good. You can make next payment starting here:":"Sounds good. You can make next payment starting here:",
+     "Sounds good. You can make payment starting here:": "Sounds good. You can make payment starting here:",
+     "How much do I owe?🫣":"How much do I owe?🫣",
+     "Not much 😀! Here are the details for your account:":"Not much 😀! Here are the details for your account:",
+
+     "Thank you for your payment.Your transaction has been successfully processed.":"Thank you for your payment.Your transaction has been successfully processed.",
+     "If you have any questions, don't hesitate to contact us.":"If you have any questions, don't hesitate to contact us.",
+     "Just a friendly reminder that the next payment is on Tuesday.":"Just a friendly reminder that the next payment is on Tuesday.",
+     "We appreciate your prompt attention to this matter.":"We appreciate your prompt attention to this matter.",
+     "We hope this message finds you well. According to our records, your payment has not yet been received. Please make the payment at your earliest convenience to avoid any late fees.":"We hope this message finds you well. According to our records, your payment has not yet been received. Please make the payment at your earliest convenience to avoid any late fees.",
+     "If you have already made the payment, please disregard this notice.":"If you have already made the payment, please disregard this notice.",
+     "This is a second reminder that your payment still outstanding. We kindly request that you make the payment as soon as possible to avoid any late fees.":"This is a second reminder that your payment still outstanding. We kindly request that you make the payment as soon as possible to avoid any late fees.",
+     "If you have any questions or concerns, please feel free to contact us.":"If you have any questions or concerns, please feel free to contact us."
+
+    
+
+
+     
+
+
+
+
+
+
+   
+
+
+}
+
