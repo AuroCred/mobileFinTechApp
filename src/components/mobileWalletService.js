@@ -335,18 +335,18 @@ export default function MobileWalletService({ route }) {
                         style={styles.inputView}
                         textStyle={{
                           fontSize: 18,
-                          padding: 20,
+                          padding: 10,
                         }}
                         dropDownContainerStyle={{
                           borderColor: "#DDDEE0",
                           padding: 0,
-                          paddingBottom: 20,
+                          paddingBottom: 10,
                         }}
                       />
                     </View>
                   </View>
 
-                  <View style={styles.ContainerAccountnumberView}>
+                  <View>
                     <View style={styles.titleView}>
                       <Text style={{ fontSize: 18, color: "#888" }}>
                         {t("Mobile account number")}
@@ -361,9 +361,9 @@ export default function MobileWalletService({ route }) {
                         maxLength={9}
                         style={{
                           fontSize: 18,
-
                           width: "80%",
                           paddingLeft: 5,
+                          padding: 15,
                         }}
                       />
                     </View>
@@ -469,14 +469,12 @@ const styles = StyleSheet.create({
   },
 
   inputView: {
-    padding: 20,
+    padding: 15,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",
-    width: "100%",
+
     backgroundColor: "#fff",
-    flexDirection: "row",
-    justifyContent: "space-between",
   },
 
   countryCodeView: {
@@ -489,12 +487,12 @@ const styles = StyleSheet.create({
   },
 
   phoneNumberView: {
-    padding: 20,
-
+    paddingLeft: 20,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",
     flexDirection: "row",
+    alignItems: "center",
 
     backgroundColor: "#fff",
   },

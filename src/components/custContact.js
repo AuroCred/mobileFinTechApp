@@ -72,10 +72,10 @@ export default function CusContact({ route, navigation }) {
       });
   };
 
-  console.log(primaryPhoneNumber);
-  console.log(secondaryPhoneNumber);
-  console.log(otherPhoneNumber);
-  console.log(email);
+  // console.log(primaryPhoneNumber);
+  // console.log(secondaryPhoneNumber);
+  // console.log(otherPhoneNumber);
+  // console.log(email);
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
@@ -110,7 +110,7 @@ export default function CusContact({ route, navigation }) {
               <TextInput
                 value={primaryPhoneNumber}
                 onChangeText={(value) => setprimaryPhoneNumber(value)}
-                style={{ fontSize: 16, width: "100%" }}
+                style={[styles.textImput, { paddingLeft: 5 }]}
               />
             </View>
 
@@ -124,7 +124,7 @@ export default function CusContact({ route, navigation }) {
               <TextInput
                 onChangeText={(value) => setsecondaryPhoneNumber(value)}
                 value={secondaryPhoneNumber}
-                style={{ fontSize: 16, width: "100%" }}
+                style={[styles.textImput, { paddingLeft: 5 }]}
               />
             </View>
 
@@ -138,7 +138,7 @@ export default function CusContact({ route, navigation }) {
               <TextInput
                 onChangeText={(value) => setotherPhoneNumber(value)}
                 value={otherPhoneNumber}
-                style={{ fontSize: 16, width: "100%" }}
+                style={[styles.textImput, { paddingLeft: 5 }]}
               />
             </View>
 
@@ -147,11 +147,11 @@ export default function CusContact({ route, navigation }) {
                 {t("Email")}
               </Text>
             </View>
-            <View style={styles.componentsWithBorder}>
+            <View style={styles.componentsWithBorderEmail}>
               <TextInput
                 onChangeText={(value) => setemail(value)}
                 value={email}
-                style={{ fontSize: 16, width: "100%" }}
+                style={[styles.textImput, { paddingLeft: 10 }]}
               />
             </View>
           </View>
@@ -175,12 +175,29 @@ const styles = StyleSheet.create({
   },
 
   componentsWithBorder: {
-    padding: 20,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",
     width: "auto",
     backgroundColor: "#fff",
     flexDirection: "row",
+    alignItems: "center",
+    alignContent: "center",
+    paddingLeft: 10,
+  },
+  componentsWithBorderEmail: {
+    borderWidth: 1,
+    borderRadius: 5,
+    borderColor: "#DDDEE0",
+    width: "auto",
+    backgroundColor: "#fff",
+    flexDirection: "row",
+    alignItems: "center",
+    alignContent: "center",
+  },
+  textImput: {
+    fontSize: 16,
+    width: "100%",
+    padding: 12,
   },
 });

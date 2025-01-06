@@ -184,6 +184,7 @@ export default function NotificationsMessage({ route }) {
           <View
             style={{
               alignItems: "center",
+              padding: 5,
             }}
           >
             <Text style={{ color: colors.Secundary }}>
@@ -568,6 +569,7 @@ const styles = StyleSheet.create({
 
   allAccountlView: {
     paddingTop: 50,
+    marginBottom: 20,
   },
 
   iconMessage: {
@@ -586,7 +588,6 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 20,
     borderBottomLeftRadius: 0,
-    marginVertical: 10,
   },
   messageBubbleSender: {
     maxWidth: "80%",
@@ -611,9 +612,6 @@ const styles = StyleSheet.create({
     color: colors.textColor,
     fontSize: 16,
     marginTop: 15,
-  },
-  finalText: {
-    marginTop: 20,
   },
 
   buttonOpt: {

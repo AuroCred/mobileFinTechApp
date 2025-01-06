@@ -101,7 +101,7 @@ export default function CusCredentials({ route, navigation }) {
         <TextInput
           onChangeText={(value) => setuserName(value)}
           value={userName}
-          style={{ fontSize: 16, width: "100%" }}
+          style={styles.textImput}
         />
       </View>
 
@@ -109,7 +109,7 @@ export default function CusCredentials({ route, navigation }) {
       <View>
         <TouchableOpacity>
           <View style={styles.passView}>
-            <Text style={{ fontSize: 16, color: "#fff" }}>
+            <Text style={{ fontSize: 16, color: "#fff", paddingLeft: 7 }}>
               {t("Change password")}
             </Text>
           </View>
@@ -128,12 +128,11 @@ const styles = StyleSheet.create({
   },
 
   components: {
-    padding: 20,
+    padding: 15,
     paddingLeft: 0,
   },
 
   componentsWithBorder: {
-    padding: 20,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",
@@ -143,11 +142,18 @@ const styles = StyleSheet.create({
   },
 
   passView: {
-    padding: 20,
+    padding: 12,
     borderWidth: 1,
     borderRadius: 5,
 
     backgroundColor: "#12A19B",
     borderColor: "#12A19B",
+    paddingLeft: 5,
+  },
+  textImput: {
+    fontSize: 16,
+    width: "100%",
+    padding: 12,
+    paddingLeft: 10,
   },
 });

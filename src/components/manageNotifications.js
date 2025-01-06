@@ -208,7 +208,7 @@ export default function ManageNotifications({ route }) {
         style={{ backgroundColor: colors.appBackground }}
       >
         <View style={styles.mainView}>
-          <View style={{ paddingLeft: 25 }}>
+          <View style={{ paddingLeft: 15 }}>
             <Text style={{ fontSize: 25, fontWeight: "600" }}>
               {t("Notifications")}
             </Text>
@@ -242,14 +242,13 @@ export default function ManageNotifications({ route }) {
                         flexDirection: "row",
                         justifyContent: "flex-start",
                         alignItems: "center",
-                        paddingLeft: 10,
                       }}
                     >
                       <View style={styles.icon}>
                         <Icon
                           name={item.notification_icon}
                           color={colors.compBackground}
-                          size={30}
+                          size={25}
                         />
                       </View>
 
@@ -269,13 +268,20 @@ export default function ManageNotifications({ route }) {
                         </View>
 
                         <Text
-                          style={[
-                            changeColor(item.read_status) === 0
-                              ? styles.messageBold
-                              : styles.message,
-                          ]}
+                          style={
+                            ([
+                              changeColor(item.read_status) === 0
+                                ? styles.messageBold
+                                : styles.message,
+                            ],
+                            styles.width)
+                          }
+                          //IOS
                           numberOfLines={1}
-                          ellipsizeMode="tail"
+                          // ellipsizeMode="tail"
+                          //
+                          // maxLines={1}
+                          ellipsize="end"
                         >
                           {t(item.notification_message)}
                         </Text>
@@ -299,10 +305,10 @@ const styles = StyleSheet.create({
     alignContent: "center",
   },
   notificationItem: {
-    padding: 15,
+    padding: 10,
     borderBottomWidth: 1,
     borderColor: colors.BorderColor,
-    width: 360,
+    width: "91%",
   },
   firstRow: {
     paddingBottom: 5,
@@ -327,8 +333,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   allAccountlView: {
-    padding: 10,
-    paddingTop: 20,
+    paddingLeft: 10,
     paddingBottom: 100,
   },
   rightContent: {
@@ -339,65 +344,9 @@ const styles = StyleSheet.create({
 
   icon: {
     backgroundColor: colors.Primary,
-    width: 40,
-    height: 40,
+    width: 35,
+    height: 35,
     borderRadius: 50,
     justifyContent: "center",
-  },
-  iconMessage: {
-    borderColor: colors.Primary,
-
-    borderWidth: 1,
-    width: 32,
-    height: 32,
-    borderRadius: 50,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-
-  centeredView: {
-    flex: 1,
-    backgroundColor: colors.appBackground,
-  },
-
-  modalText: {
-    marginBottom: 15,
-  },
-  messageView: {
-    padding: 30,
-  },
-  messageBubbleReceiver: {
-    maxWidth: "77%",
-    padding: 15,
-    borderRadius: 20,
-    borderBottomLeftRadius: 0,
-    marginVertical: 5,
-  },
-  messageBubbleSender: {
-    maxWidth: "77%",
-    padding: 15,
-    borderRadius: 20,
-    borderBottomRightRadius: 0,
-    marginVertical: 15,
-  },
-
-  receiver: {
-    backgroundColor: colors.messageText,
-    alignSelf: "flex-start",
-    marginLeft: 5,
-  },
-  sender: {
-    alignSelf: "flex-end",
-    marginRight: 20,
-    borderWidth: 1,
-    borderColor: colors.BorderColor,
-  },
-  messageText: {
-    color: colors.textColor,
-    fontSize: 16,
-    marginTop: 15,
-  },
-  finalText: {
-    marginTop: 20,
   },
 });

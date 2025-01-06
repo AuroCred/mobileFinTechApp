@@ -95,7 +95,7 @@ export default function CusLocation({ route, navigation }) {
               <TextInput
                 value={country}
                 onChangeText={(value) => setcountry(value)}
-                style={{ fontSize: 16, width: "100%" }}
+                style={styles.textImput}
               />
             </View>
 
@@ -108,7 +108,7 @@ export default function CusLocation({ route, navigation }) {
               <TextInput
                 onChangeText={(value) => setprovinceorstate(value)}
                 value={provinceorstate}
-                style={{ fontSize: 16, width: "100%" }}
+                style={styles.textImput}
               />
             </View>
 
@@ -119,7 +119,7 @@ export default function CusLocation({ route, navigation }) {
               <TextInput
                 onChangeText={(value) => setcity(value)}
                 value={city}
-                style={{ fontSize: 16, width: "100%" }}
+                style={styles.textImput}
               />
             </View>
 
@@ -132,7 +132,7 @@ export default function CusLocation({ route, navigation }) {
               <TextInput
                 onChangeText={(value) => setaddress(value)}
                 value={address}
-                style={{ fontSize: 16, width: "100%" }}
+                style={styles.textImput}
               />
             </View>
           </View>
@@ -156,12 +156,17 @@ const styles = StyleSheet.create({
   },
 
   componentsWithBorder: {
-    padding: 20,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",
     width: "auto",
     backgroundColor: "#fff",
     flexDirection: "row",
+  },
+  textImput: {
+    fontSize: 16,
+    width: "100%",
+    padding: 12,
+    paddingLeft: 10,
   },
 });

@@ -60,7 +60,7 @@ export default function SearchBarItems({
               <View style={styleSearchBarItems.secondRowView}>
                 <Text style={{ fontSize: 14 }}>
                   {t(moment(item.created_at).format("MMM"))}
-                  {moment().format(" DD, YYYY")}
+                  {moment(item.created_at).format(" DD, YYYY")}
                 </Text>
                 <Text style={{ fontSize: 14 }}>
                   {t(item.transaction_status)}
@@ -95,7 +95,7 @@ export default function SearchBarItems({
               <View style={styleSearchBarItems.secondRowView}>
                 <Text style={{ fontSize: 14 }}>
                   {t(moment(item.created_at).format("MMM"))}
-                  {moment().format(" DD, YYYY")}
+                  {moment(item.created_at).format(" DD, YYYY")}
                 </Text>
                 <Text style={{ fontSize: 14 }}>
                   {t(item.transaction_status)}
@@ -128,7 +128,7 @@ export default function SearchBarItems({
               <View style={styleSearchBarItems.secondRowView}>
                 <Text style={{ fontSize: 14 }}>
                   {t(moment(item.created_at).format("MMM"))}
-                  {moment().format(" DD, YYYY")}
+                  {moment(item.created_at).format(" DD, YYYY")}
                 </Text>
                 <Text style={{ fontSize: 14 }}>
                   {t(item.transaction_status)}

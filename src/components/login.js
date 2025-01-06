@@ -18,6 +18,7 @@ import { Icon } from "react-native-elements";
 import { API_URL_LOGIN, API_URL_USER_ACCOUNT } from "@env";
 import axios from "axios";
 import LottieView from "lottie-react-native";
+import colors from "./color";
 
 export default function Login() {
   const navigation = useNavigation();
@@ -99,7 +100,7 @@ export default function Login() {
     <>
       <KeyboardAvoidingView
         behavior="padding"
-        style={{ flex: 1, zIndex: 1000 }}
+        style={{ flex: 1, zIndex: 1000, backgroundColor: colors.appBackground }}
       >
         <View style={styles.mainContainer}>
           <View style={styles.childContainer1}>
@@ -127,6 +128,7 @@ export default function Login() {
                     onChangeText={(value) => setUsername(value)}
                     style={{
                       fontSize: 16,
+                      padding: 12,
                     }}
                   />
                 </View>
@@ -146,12 +148,13 @@ export default function Login() {
                     style={{
                       fontSize: 16,
                       width: "90%",
+                      padding: 12,
                     }}
                   />
                   <Icon
                     name={showPassword ? "visibility" : "visibility-off"}
                     size={24}
-                    color="#12A19A"
+                    color={colors.Primary}
                     onPress={() => setShowPassword(!showPassword)}
                   />
                 </View>
@@ -162,7 +165,11 @@ export default function Login() {
                 onPress={() => userLogin()}
               >
                 <Text
-                  style={{ fontSize: 18, color: "#fff", fontWeight: "500" }}
+                  style={{
+                    fontSize: 18,
+                    color: colors.compBackground,
+                    fontWeight: "500",
+                  }}
                 >
                   Sign in
                 </Text>
@@ -171,7 +178,11 @@ export default function Login() {
               <View style={styles.loginRecover}>
                 <TouchableOpacity>
                   <Text
-                    style={{ fontSize: 16, fontWeight: 500, color: "#12A19A" }}
+                    style={{
+                      fontSize: 16,
+                      fontWeight: 500,
+                      color: colors.Primary,
+                    }}
                   >
                     Forgot username
                   </Text>
@@ -179,7 +190,11 @@ export default function Login() {
 
                 <View>
                   <Text
-                    style={{ fontSize: 16, color: "#888", fontWeight: 500 }}
+                    style={{
+                      fontSize: 16,
+                      color: colors.Secundary,
+                      fontWeight: 500,
+                    }}
                   >
                     or
                   </Text>
@@ -187,7 +202,11 @@ export default function Login() {
 
                 <TouchableOpacity>
                   <Text
-                    style={{ fontSize: 16, fontWeight: 500, color: "#12A19A" }}
+                    style={{
+                      fontSize: 16,
+                      fontWeight: 500,
+                      color: colors.Primary,
+                    }}
                   >
                     password?
                   </Text>
@@ -226,21 +245,22 @@ const styles = StyleSheet.create({
   mainContainer: {
     flexDirection: "column",
     flex: 1,
-    backgroundColor: "#F5F6F8",
+    backgroundColor: colors.appBackground,
     justifyContent: "space-around",
   },
 
   childContainer1: {
     flex: 5,
-    backgroundColor: "#12A19A",
+    backgroundColor: colors.Primary,
   },
 
   childContainer2: {
     flex: 5,
     justifyContent: "flex-start",
     alignContent: "center",
-    backgroundColor: "#F5F6F8",
+    backgroundColor: colors.appBackground,
     padding: 20,
+    paddingBottom: 0,
   },
 
   logo: {
@@ -253,26 +273,25 @@ const styles = StyleSheet.create({
     paddingLeft: 0,
   },
   inputuser: {
-    padding: 12,
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: "#888",
+    borderColor: colors.Secundary,
   },
   inputpass: {
-    padding: 12,
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: "#888",
+    borderColor: colors.Secundary,
     flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "center",
   },
   signin: {
-    padding: 12,
+    padding: 10,
     borderWidth: 1,
     borderRadius: 5,
     marginTop: 15,
-    backgroundColor: "#12A19A",
-    borderColor: "#12A19A",
+    backgroundColor: colors.Primary,
+    borderColor: colors.Primary,
     alignItems: "center",
   },
 

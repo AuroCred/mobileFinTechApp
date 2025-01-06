@@ -124,7 +124,7 @@ export default function RecentTransactions({ userId }) {
                 <View style={styles.secondRowView}>
                   <Text style={{ fontSize: 14 }}>
                     {t(moment(item.created_at).format("MMM"))}
-                    {moment().format(" DD, YYYY")}
+                    {moment(item.created_at).format(" DD, YYYY")}
                   </Text>
                   <Text style={{ fontSize: 14 }}>
                     {t(item.transaction_status)}

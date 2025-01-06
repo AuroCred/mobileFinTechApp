@@ -77,18 +77,18 @@ export default function AllTransactions({ route }) {
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
-      style={stylesAllTransaction.conteiner}
+      style={styles.conteiner}
     >
-      <View style={stylesAllTransaction.mainView}>
+      <View style={styles.mainView}>
         <SafeAreaView>
-          <View style={stylesAllTransaction.searchBarView}>
+          <View style={styles.searchBarView}>
             <Icon name="search" />
 
             <TextInput
               value={input}
               onChangeText={(Text) => setImput(Text)}
               placeholder={t("Search")}
-              style={{ width: "100%", fontSize: 18 }}
+              style={styles.textImput}
             />
           </View>
 
@@ -104,7 +104,7 @@ export default function AllTransactions({ route }) {
   );
 }
 
-const stylesAllTransaction = StyleSheet.create({
+const styles = StyleSheet.create({
   conteiner: {
     flex: 1,
   },
@@ -116,13 +116,20 @@ const stylesAllTransaction = StyleSheet.create({
     paddingBottom: 50,
   },
   searchBarView: {
-    padding: 15,
     flexDirection: "row",
     width: "100%",
     alignContent: "center",
+    alignItems: "center",
     backgroundColor: "#FFF",
     marginBottom: 0,
     borderWidth: 0.5,
     borderColor: "#DDDEE0",
+    paddingLeft: 5,
+  },
+  textImput: {
+    fontSize: 18,
+    width: "100%",
+    padding: 12,
+    paddingLeft: 5,
   },
 });

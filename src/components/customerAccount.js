@@ -119,19 +119,23 @@ export default function CustomerAccount({ userId, setLoading }) {
         </Text>
       </View>
 
-      <TouchableOpacity
-        onPress={() =>
-          navigation.navigate("AccountDetail", {
-            userId: userId,
-            accountNumb: accountNumber,
-          })
-        }
-      >
-        <GestureHandlerRootView style={{ flex: 1 }}>
-          <Swipeable
-            ref={swipeableRef}
-            renderRightActions={renderRightActions}
-            overshootRight={false} // Prevents overshooting
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <Swipeable
+          ref={swipeableRef}
+          renderRightActions={renderRightActions}
+          overshootRight={false}
+          gestureEnabled={false}
+          //renderLeftActions={() => null} // Prevent swipe from left
+          //onSwipeableLeftOpen={() => null} // Prevent swipe from left
+          onSwipeableRightOpen={() => null}
+        >
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate("AccountDetail", {
+                userId: userId,
+                accountNumb: accountNumber,
+              })
+            }
           >
             <View style={styles.accountInfoView}>
               <View style={styles.accountNumber}>
@@ -163,9 +167,9 @@ export default function CustomerAccount({ userId, setLoading }) {
                 </Text>
               </View>
             </View>
-          </Swipeable>
-        </GestureHandlerRootView>
-      </TouchableOpacity>
+          </TouchableOpacity>
+        </Swipeable>
+      </GestureHandlerRootView>
     </>
   );
 }

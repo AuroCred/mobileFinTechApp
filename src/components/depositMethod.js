@@ -126,80 +126,81 @@ export default function DepositMethod({ route }) {
     }
   };
 
-  console.log(limit);
   return (
     <View style={{ flex: 1, backgroundColor: "#F5F6F8" }}>
-      <View style={styleDepositMethod.pageView}>
-        <FlatList
-          data={mobileWalletData}
-          renderItem={({ item }) => {
-            return (
-              <TouchableOpacity
-                onPress={() =>
-                  navigation.navigate("ConfirmDeposit", {
-                    username: userId,
-                    serviceName: item.service_name,
-                    serviceAccountNumber: item.service_account_number,
-                    depositAmount: depositAmount,
-                  })
-                }
-              >
-                <View key={item.id} style={styleDepositMethod.allconteinarView}>
-                  <View style={{ padding: 10 }}>
-                    <Icon name="phone-iphone" color={"#12A19B"} size={30} />
-                  </View>
-
-                  <View style={styleDepositMethod.mobileWalletDataView}>
-                    <View style={styleDepositMethod.firstRow}>
-                      <Text style={{ fontSize: 18, fontWeight: 500 }}>
-                        {item.service_name}
-                      </Text>
-                      <Text
-                        style={{
-                          fontSize: 18,
-                          fontWeight: 500,
-                          paddingLeft: 5,
-                        }}
-                      >
-                        . {item.service_account_number.substr(-4)}
-                      </Text>
+      <ScrollView style={styles.scroll}>
+        <View style={styles.pageView}>
+          <FlatList
+            data={mobileWalletData}
+            renderItem={({ item }) => {
+              return (
+                <TouchableOpacity
+                  onPress={() =>
+                    navigation.navigate("ConfirmDeposit", {
+                      username: userId,
+                      serviceName: item.service_name,
+                      serviceAccountNumber: item.service_account_number,
+                      depositAmount: depositAmount,
+                    })
+                  }
+                >
+                  <View key={item.id} style={styles.allconteinarView}>
+                    <View style={{ padding: 10 }}>
+                      <Icon name="phone-iphone" color={"#12A19B"} size={30} />
                     </View>
 
-                    <View style={styleDepositMethod.secondRow}>
-                      <Text style={{ fontSize: 16, color: "#888" }}>
-                        {item.first_name} {item.last_name}
-                      </Text>
+                    <View style={styles.mobileWalletDataView}>
+                      <View style={styles.firstRow}>
+                        <Text style={{ fontSize: 18, fontWeight: 500 }}>
+                          {item.service_name}
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 18,
+                            fontWeight: 500,
+                            paddingLeft: 5,
+                          }}
+                        >
+                          . {item.service_account_number.substr(-4)}
+                        </Text>
+                      </View>
+
+                      <View style={styles.secondRow}>
+                        <Text style={{ fontSize: 16, color: "#888" }}>
+                          {item.first_name} {item.last_name}
+                        </Text>
+                      </View>
+                    </View>
+
+                    <View style={{ padding: 10 }}>
+                      <Icon name="navigate-next" />
                     </View>
                   </View>
+                </TouchableOpacity>
+              );
+            }}
+            scrollEnabled={false}
+          />
 
-                  <View style={{ padding: 10 }}>
-                    <Icon name="navigate-next" />
-                  </View>
-                </View>
-              </TouchableOpacity>
-            );
-          }}
-          scrollEnabled={false}
-        />
+          {addNewButton()}
 
-        {addNewButton()}
-
-        <View
-          style={{
-            paddingTop: 20,
-            borderBottomColor: "black",
-            borderBottomWidth: StyleSheet.hairlineWidth,
-          }}
-        />
-        <View style={{ paddingTop: 20 }}>
-          <Text>
-            <Text style={{ fontWeight: 600 }}>{t("Notice")} : </Text>
-            {t(
-              "You can only add up to 3 different accounts. Use settings to edit or delete."
-            )}
-          </Text>
+          <View
+            style={{
+              paddingTop: 20,
+              borderBottomColor: "black",
+              borderBottomWidth: StyleSheet.hairlineWidth,
+            }}
+          />
+          <View style={{ paddingTop: 20 }}>
+            <Text>
+              <Text style={{ fontWeight: 600 }}>{t("Notice")} : </Text>
+              {t(
+                "You can only add up to 3 different accounts. Use settings to edit or delete."
+              )}
+            </Text>
+          </View>
         </View>
-      </View>
+      </ScrollView>
 
       <Modal
         visible={isModelVisible}
@@ -210,7 +211,7 @@ export default function DepositMethod({ route }) {
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <KeyboardAvoidingView
               behavior={Platform.OS === "ios" ? "padding" : "height"}
-              style={styleDepositMethod.container}
+              style={styles.container}
             >
               <View
                 style={{
@@ -242,25 +243,25 @@ export default function DepositMethod({ route }) {
                   </View>
                 </TouchableOpacity>
               </View>
-              <View style={styleDepositMethod.closeModel}>
+              <View style={styles.closeModel}>
                 <ScrollView>
-                  <View style={styleDepositMethod.bodyView}>
-                    <View style={styleDepositMethod.ContainerView}>
-                      <View style={styleDepositMethod.titleView}>
+                  <View style={styles.bodyView}>
+                    <View style={styles.ContainerView}>
+                      <View style={styles.titleView}>
                         <Text style={{ fontSize: 18, color: "#888" }}>
                           {t("Service type")}
                         </Text>
                       </View>
 
-                      <View style={styleDepositMethod.inputView}>
+                      <View style={styles.inputView}>
                         <Text style={{ fontSize: 18, width: "auto" }}>
                           {serviceType}
                         </Text>
                       </View>
                     </View>
 
-                    <View style={styleDepositMethod.ContainerView}>
-                      <View style={styleDepositMethod.titleView}>
+                    <View style={styles.ContainerView}>
+                      <View style={styles.titleView}>
                         <Text style={{ fontSize: 18, color: "#888" }}>
                           {t("Service name")}
                         </Text>
@@ -276,27 +277,27 @@ export default function DepositMethod({ route }) {
                           setItems={setItems}
                           defaultValue={serviceName}
                           listMode="SCROLLVIEW"
-                          style={styleDepositMethod.inputView}
+                          style={styles.inputView}
                           textStyle={{
                             fontSize: 18,
-                            padding: 20,
+                            padding: 10,
                           }}
                           dropDownContainerStyle={{
                             borderColor: "#DDDEE0",
                             padding: 0,
-                            paddingBottom: 20,
+                            paddingBottom: 10,
                           }}
                         />
                       </View>
                     </View>
 
-                    <View style={styleDepositMethod.ContainerAccountnumberView}>
-                      <View style={styleDepositMethod.titleView}>
+                    <View style={styles.ContainerAccountnumberView}>
+                      <View style={styles.titleView}>
                         <Text style={{ fontSize: 18, color: "#888" }}>
                           {t("Mobile account number")}
                         </Text>
                       </View>
-                      <View style={styleDepositMethod.phoneNumberView}>
+                      <View style={styles.phoneNumberView}>
                         <Text style={{ fontSize: 18 }}>+258</Text>
                         <TextInput
                           onChangeText={(value) => setserviceAccount(value)}
@@ -305,9 +306,9 @@ export default function DepositMethod({ route }) {
                           maxLength={9}
                           style={{
                             fontSize: 18,
-
                             width: "80%",
                             paddingLeft: 5,
+                            padding: 15,
                           }}
                         />
                       </View>
@@ -340,7 +341,7 @@ export default function DepositMethod({ route }) {
   );
 }
 
-const styleDepositMethod = StyleSheet.create({
+const styles = StyleSheet.create({
   scroll: {
     flex: 1,
     padding: 20,
@@ -404,14 +405,12 @@ const styleDepositMethod = StyleSheet.create({
   },
 
   inputView: {
-    padding: 20,
+    padding: 15,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",
-    width: "100%",
+
     backgroundColor: "#fff",
-    flexDirection: "row",
-    justifyContent: "space-between",
   },
 
   countryCodeView: {
@@ -424,12 +423,12 @@ const styleDepositMethod = StyleSheet.create({
   },
 
   phoneNumberView: {
-    padding: 20,
-
+    paddingLeft: 20,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",
     flexDirection: "row",
+    alignItems: "center",
 
     backgroundColor: "#fff",
   },

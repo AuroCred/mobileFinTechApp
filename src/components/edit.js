@@ -115,7 +115,12 @@ export default function Edit({ route, navigation }) {
                 <TextInput
                   value={fName}
                   onChangeText={(value) => setfName(value)}
-                  style={{ fontSize: 16, width: "100%" }}
+                  style={{
+                    fontSize: 16,
+                    width: "100%",
+                    padding: 20,
+                    paddingLeft: 10,
+                  }}
                 />
               </View>
             </View>
@@ -130,7 +135,12 @@ export default function Edit({ route, navigation }) {
                 <TextInput
                   value={lName}
                   onChangeText={(value) => setlName(value)}
-                  style={{ fontSize: 16, width: "100%" }}
+                  style={{
+                    fontSize: 16,
+                    width: "100%",
+                    padding: 20,
+                    paddingLeft: 10,
+                  }}
                 />
               </View>
             </View>
@@ -155,10 +165,14 @@ export default function Edit({ route, navigation }) {
                   style={styleDepositMethod.inputView}
                   textStyle={{
                     fontSize: 18,
-                    padding: 13,
-                    paddingLeft: 5,
+                    padding: 15,
+                    paddingLeft: 0,
                   }}
-                  dropDownContainerStyle={{ borderColor: "#DDDEE0" }}
+                  dropDownContainerStyle={{
+                    borderColor: "#DDDEE0",
+                    padding: 0,
+                    paddingBottom: 10,
+                  }}
                 />
               </View>
             </View>
@@ -181,6 +195,7 @@ export default function Edit({ route, navigation }) {
 
                     width: "80%",
                     paddingLeft: 5,
+                    padding: 20,
                   }}
                 />
               </View>
@@ -267,7 +282,6 @@ const styleDepositMethod = StyleSheet.create({
   },
 
   inputView: {
-    padding: 20,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",
@@ -287,12 +301,13 @@ const styleDepositMethod = StyleSheet.create({
   },
 
   phoneNumberView: {
-    padding: 20,
+    paddingLeft: 10,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",
     flexDirection: "row",
     backgroundColor: "#fff",
+    alignItems: "center",
   },
 
   accountNumberView: {

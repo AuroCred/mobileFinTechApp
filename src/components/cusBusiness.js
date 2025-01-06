@@ -92,7 +92,7 @@ export default function CusBusiness({ route, navigation }) {
               <TextInput
                 value={companyName}
                 onChangeText={(value) => setcompanyName(value)}
-                style={{ fontSize: 16, width: "100%" }}
+                style={styles.textImput}
               />
             </View>
 
@@ -105,7 +105,7 @@ export default function CusBusiness({ route, navigation }) {
               <TextInput
                 onChangeText={(value) => setstartYear(value)}
                 value={startYear}
-                style={{ fontSize: 16, width: "100%" }}
+                style={styles.textImput}
               />
             </View>
 
@@ -118,7 +118,7 @@ export default function CusBusiness({ route, navigation }) {
               <TextInput
                 onChangeText={(value) => setbusinessType(value)}
                 value={t(businessType)}
-                style={{ fontSize: 16, width: "100%" }}
+                style={styles.textImput}
               />
             </View>
           </View>
@@ -142,12 +142,17 @@ const styles = StyleSheet.create({
   },
 
   componentsWithBorder: {
-    padding: 20,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",
     width: "auto",
     backgroundColor: "#fff",
     flexDirection: "row",
+  },
+  textImput: {
+    fontSize: 16,
+    width: "100%",
+    padding: 12,
+    paddingLeft: 10,
   },
 });

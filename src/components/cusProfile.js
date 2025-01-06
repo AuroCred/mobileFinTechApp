@@ -96,7 +96,7 @@ export default function CusProfile({ route, navigation }) {
               <TextInput
                 onChangeText={(value) => setfirstName(value)}
                 value={firstName}
-                style={{ fontSize: 16, width: "100%" }}
+                style={styles.textImput}
               />
             </View>
             <View style={styles.components}>
@@ -108,7 +108,7 @@ export default function CusProfile({ route, navigation }) {
               <TextInput
                 onChangeText={(value) => setmiddleName(value)}
                 value={middleName}
-                style={{ fontSize: 16, width: "100%" }}
+                style={styles.textImput}
               />
             </View>
             <View style={styles.components}>
@@ -120,7 +120,7 @@ export default function CusProfile({ route, navigation }) {
               <TextInput
                 onChangeText={(value) => setlastName(value)}
                 value={lastName}
-                style={{ fontSize: 16, width: "100%" }}
+                style={styles.textImput}
               />
             </View>
             <View style={styles.components}>
@@ -135,7 +135,7 @@ export default function CusProfile({ route, navigation }) {
                 value={moment(DOB).format(t("YYYY-MM-DD"))}
                 placeholder={t("Year-Month-Day")}
                 editable={false}
-                style={{ fontSize: 16, width: "100%" }}
+                style={styles.textImput}
               />
             </View>
           </View>
@@ -152,6 +152,12 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingTop: 70,
   },
+  textImput: {
+    fontSize: 16,
+    width: "100%",
+    padding: 12,
+    paddingLeft: 10,
+  },
 
   components: {
     padding: 20,
@@ -159,7 +165,7 @@ const styles = StyleSheet.create({
   },
 
   componentsWithBorder: {
-    padding: 20,
+    padding: 0,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",
