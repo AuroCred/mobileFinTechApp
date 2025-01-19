@@ -108,10 +108,13 @@ export default function Languages({ route }) {
           style={styles.inputView}
           textStyle={{
             fontSize: 18,
-            padding: 13,
-            paddingLeft: 5,
+            padding: 5,
           }}
-          dropDownContainerStyle={{ borderColor: "#DDDEE0" }}
+          dropDownContainerStyle={{
+            borderColor: "#DDDEE0",
+            padding: 0,
+            paddingBottom: 10,
+          }}
         />
       </View>
     </View>

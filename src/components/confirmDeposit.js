@@ -162,7 +162,7 @@ export default function ConfirmDeposit({ route }) {
                 {t("Notice")} :{" "}
               </Text>
               {t(
-                "You will receive a text message from your mobile wallet service to confirm the transacrion in order for the deposit to be completed."
+                "You will receive a text message from your mobile wallet service to confirm the transaction in order for the deposit to be completed."
               )}
             </Text>
           </View>
@@ -179,7 +179,7 @@ export default function ConfirmDeposit({ route }) {
                   color: "#fff",
                 }}
               >
-                {t("Make deposit")}
+                {t("Make payment")}
               </Text>
             </View>
           </TouchableOpacity>
@@ -202,14 +202,14 @@ export default function ConfirmDeposit({ route }) {
 
             <View style={styles.amountContainer}>
               <Text style={{ fontSize: 35, fontWeight: 600 }}>
-                {t("Your")}{" "}
+                {t("Your payment of")}{" "}
                 {isValidLanguageTag(showCountryCurrencyCode)
                   ? new Intl.NumberFormat(showCountryCurrencyCode, {
                       style: "currency",
                       currency: showCountryCurrency,
                     }).format(depositAmount)
                   : ""}{" "}
-                {t("is now being deposit")}.
+                {t("is now being processed")}.
               </Text>
             </View>
 

@@ -89,13 +89,14 @@
     "Deposit amount":"Volor por depositar",
     "Deposited from":"Depositado de",
     "Deposit date":"Data do depósito",
-    "You will receive a text message from your mobile wallet service to confirm the transacrion in order for the deposit to be completed.":"Você receberá uma mensagem do seu serviço de carteira móvel para confirmar a transação para que o depósito seja concluído.",
+    "You will receive a text message from your mobile wallet service to confirm the transaction in order for the deposit to be completed.":
+    "Você receberá uma mensagem do seu serviço de carteira móvel para confirmar a transação para que o depósito seja concluído.",
     "Notice":"Nota",
     "Make deposit":"Fazer depósito",
     "Cancel":"Cancelar",
     "Processing...":"Processando...",
-    "Your":"Seu",
-    "is now being deposit":"está sendo depositado",
+    "Your payment of":"Seu pagamento de",
+    "is now being processed":"está sendo processado",
     "Done":"Fechar",
     "Amount":"Valor",
     "Service":"Serviço",
@@ -110,7 +111,8 @@
     "Mobile wallet":"Carteira móvel",
     "Insert mobile account number!":"Insira o número da conta móvel!",
     "Add new account":"adicionar nova conta",
-    "You can only add up to 3 different accounts. Use settings to edit or delete.":"Você só pode adicionar no máximo 3 contas diferentes. Usa Configurações para editar ou apagar.",
+    "You can only add up to 3 different accounts. Use settings to edit or delete.":
+    "Você só pode adicionar no máximo 3 contas diferentes. Usa Configurações para editar ou apagar.",
     "You can only add up to 3 different accounts.":"Você só pode adicionar no máximo 3 contas diferentes.",
 
     "First name":"Nome",
@@ -135,7 +137,8 @@
     "Portuguese":"Português",
     "Macua (Mozambique)":"Macua (Moçambique)",
     
-    "New language settings will apply next time you restart the app.":"As difinições da novo idioma serão aplicados quando o applicativo for reiniciado.",
+    "New language settings will apply next time you restart the app.":
+    "As difinições da novo idioma serão aplicados quando o applicativo for reiniciado.",
      "Close app now":"Fechar o app agora",
     "Ok":"Ok",
      "YYYY-MM-DD":"DD-MM-YYYY",
@@ -204,13 +207,16 @@
       "Not much 😀! Here are the details for your account:":"Não é muito assim 😀! Aqui está os detalhes da sua conta:",
 
 
-      "Thank you for your payment.Your transaction has been successfully processed.":"Muito obrigado por seu pagamento. A sua transação foi processada com sucesso.",
+      "Thank you for your payment.Your transaction has been successfully processed.":
+      "Muito obrigado por seu pagamento. A sua transação foi processada com sucesso.",
       "If you have any questions, don't hesitate to contact us.":"Se tiver qualquer dúvida, não hesite  em nos contatar-nos .",
       "Just a friendly reminder that the next payment is on Tuesday.":"Só para recordar que o próximo pagamento é na terça-feira.",
       "We appreciate your prompt attention to this matter.":"Nós agradecemos a sua compreensão.",
-      "We hope this message finds you well. According to our records, your payment has not yet been received. Please make the payment at your earliest convenience to avoid any late fees.":"Esperamos que esta mensagem encontre você bem. De acordo com os nossos recordes, o seu pagamento ainda não foi recebido. Por favor, faça o pagamento o mais rápido que puder para evitar multa de atrasos.",
+      "We hope this message finds you well. According to our records, your payment has not yet been received. Please make the payment at your earliest convenience to avoid any late fees.":
+      "Esperamos que esta mensagem encontre você bem. De acordo com os nossos recordes, o seu pagamento ainda não foi recebido. Por favor, faça o pagamento o mais rápido que puder para evitar multa de atrasos.",
       "If you have already made the payment, please disregard this notice.":"Se já fizeste o pagamento, por favor ignore esta notificação.",
-      "This is a second reminder that your payment still outstanding. We kindly request that you make the payment as soon as possible to avoid any late fees.":"Esta é a segunda notificação que o seu pagamento ainda não foi feito. Nós gostaríamos que o fizesse o mais rápido possível para evitar multa de atrasos.",
+      "This is a second reminder that your payment still outstanding. We kindly request that you make the payment as soon as possible to avoid any late fees.":
+      "Esta é a segunda notificação que o seu pagamento ainda não foi feito. Nós gostaríamos que o fizesse o mais rápido possível para evitar multa de atrasos.",
       "If you have any questions or concerns, please feel free to contact us.":"Se tiver qualquer dúvida, sinta-se livre em nos contatar."
 
 

@@ -42,6 +42,7 @@ export default function NotificationsMessage({ route }) {
   const [pressStatus2, setPressStatus2] = useState("");
 
   const [firstName, setfirstName] = useState("");
+  const [accountNumber, setAccountNumber] = useState("");
   const [backgroundColorMsg, setbackgroundColorMsg] = useState(
     colors.compBackground
   );
@@ -138,6 +139,7 @@ export default function NotificationsMessage({ route }) {
 
       .then((response) => {
         setfirstName(response.data[0].first_name);
+        setAccountNumber(response.data[0].account_number);
       })
       .catch((error) => {
         alert("Error" + error);
@@ -314,6 +316,7 @@ export default function NotificationsMessage({ route }) {
                         onPress={() =>
                           navigation.navigate("AccountDetail", {
                             userId: userId,
+                            accountNumb: accountNumber,
                           })
                         }
                       >
@@ -370,6 +373,7 @@ export default function NotificationsMessage({ route }) {
                       onPress={() =>
                         navigation.navigate("AccountDetail", {
                           userId: userId,
+                          accountNumb: accountNumber,
                         })
                       }
                     >

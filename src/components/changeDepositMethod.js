@@ -43,7 +43,8 @@ export default function ChangeDepositMethod({ route }) {
 
   const [serviceType, setserviceType] = useState(t("Mobile wallet"));
   const [serviceAccount, setserviceAccount] = useState("");
-
+  const [fName, setfName] = useState("");
+  const [lName, setlName] = useState("");
   const [open, setOpen] = useState(false);
   const [serviceName, setServiceName] = useState("E-Mola");
   const [items, setItems] = useState([
@@ -80,6 +81,8 @@ export default function ChangeDepositMethod({ route }) {
           serviceType: serviceType,
           serviceName: serviceName,
           serviceAccount: serviceAccount,
+          fName: fName,
+          lName: lName,
         })
         .catch((error) => {
           alert("Error" + error);
@@ -243,9 +246,47 @@ export default function ChangeDepositMethod({ route }) {
                   </View>
                 </TouchableOpacity>
               </View>
-              <View style={styles.closeModel}>
-                <ScrollView>
+              <ScrollView>
+                <View style={styles.closeModel}>
                   <View style={styles.bodyView}>
+                    <View style={styles.ContainerView}>
+                      <View style={styles.titleView}>
+                        <Text style={{ fontSize: 18, color: "#888" }}>
+                          {t("First name")}
+                        </Text>
+                      </View>
+
+                      <View style={styles.inputTextView}>
+                        <TextInput
+                          value={fName}
+                          onChangeText={(value) => setfName(value)}
+                          style={{
+                            fontSize: 16,
+                            width: "100%",
+                            paddingLeft: 10,
+                          }}
+                        />
+                      </View>
+                    </View>
+                    <View style={styles.ContainerView}>
+                      <View style={styles.titleView}>
+                        <Text style={{ fontSize: 18, color: "#888" }}>
+                          {t("Last name")}
+                        </Text>
+                      </View>
+
+                      <View style={styles.inputTextView}>
+                        <TextInput
+                          value={lName}
+                          onChangeText={(value) => setlName(value)}
+                          style={{
+                            fontSize: 16,
+                            width: "100%",
+                            paddingLeft: 10,
+                          }}
+                        />
+                      </View>
+                    </View>
                     <View style={styles.ContainerView}>
                       <View style={styles.titleView}>
                         <Text style={{ fontSize: 18, color: "#888" }}>
@@ -254,7 +295,7 @@ export default function ChangeDepositMethod({ route }) {
                       </View>
 
                       <View style={styles.inputView}>
-                        <Text style={{ fontSize: 18, width: "auto" }}>
+                        <Text style={{ fontSize: 16, width: "auto" }}>
                           {serviceType}
                         </Text>
                       </View>
@@ -279,7 +320,7 @@ export default function ChangeDepositMethod({ route }) {
                           listMode="SCROLLVIEW"
                           style={styles.inputView}
                           textStyle={{
-                            fontSize: 18,
+                            fontSize: 16,
                             padding: 10,
                           }}
                           dropDownContainerStyle={{
@@ -305,7 +346,7 @@ export default function ChangeDepositMethod({ route }) {
                           keyboardType="numeric"
                           maxLength={9}
                           style={{
-                            fontSize: 18,
+                            fontSize: 16,
                             width: "80%",
                             paddingLeft: 5,
                             padding: 15,
@@ -331,8 +372,8 @@ export default function ChangeDepositMethod({ route }) {
                       </View>
                     </TouchableOpacity> */}
                   </View>
-                </ScrollView>
-              </View>
+                </View>
+              </ScrollView>
             </KeyboardAvoidingView>
           </TouchableWithoutFeedback>
         </SafeAreaView>
@@ -413,6 +454,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+
+  inputTextView: {
+    padding: 5,
+    borderWidth: 1,
+    borderRadius: 5,
+    borderColor: "#DDDEE0",
+
+    backgroundColor: "#fff",
   },
 
   countryCodeView: {

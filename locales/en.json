@@ -90,13 +90,14 @@
     "Deposit amount":"Deposit amount",
     "Deposited from":"Deposited from",
     "Deposit date":"Deposit date",
-    "You will receive a text message from your mobile wallet service to confirm the transacrion in order for the deposit to be completed.":"You will receive a text message from your mobile wallet service to confirm the transacrion in order for the deposit to be completed.",
+    "You will receive a text message from your mobile wallet service to confirm the transaction in order for the deposit to be completed.":
+    "You will receive a text message from your mobile wallet service to confirm the transaction in order for the deposit to be completed.",
     "Notice":"Notice",
     "Make deposit":"Make deposit",
     "Cancel":"Cancel",
     "Processing...":"Processing...",
-    "Your":"Your",
-    "is now being deposit":"is now being deposit",
+    "Your payment of":"Your payment of",
+    "is now being processed":"is now being processsed",
     "Done":"Done",
     "Amount":"Amount",
     "Service":"Service",
@@ -111,7 +112,8 @@
     "Mobile wallet":"Mobile wallet",
     "Insert mobile account number!":"Insert mobile account number!",
     "Add new account":"Add new account",
-    "You can only add up to 3 different accounts. Use settings to edit or delete.":"You can only add up to 3 different accounts. Use settings to edit or delete.",
+    "You can only add up to 3 different accounts. Use settings to edit or delete.":
+    "You can only add up to 3 different accounts. Use settings to edit or delete.",
     "You can only add up to 3 different accounts.":"You can only add up to 3 different accounts.",
     
     "First name":"First name",
@@ -201,13 +203,16 @@
      "How much do I owe?🫣":"How much do I owe?🫣",
      "Not much 😀! Here are the details for your account:":"Not much 😀! Here are the details for your account:",
 
-     "Thank you for your payment.Your transaction has been successfully processed.":"Thank you for your payment.Your transaction has been successfully processed.",
+     "Thank you for your payment.Your transaction has been successfully processed.":
+     "Thank you for your payment.Your transaction has been successfully processed.",
      "If you have any questions, don't hesitate to contact us.":"If you have any questions, don't hesitate to contact us.",
      "Just a friendly reminder that the next payment is on Tuesday.":"Just a friendly reminder that the next payment is on Tuesday.",
      "We appreciate your prompt attention to this matter.":"We appreciate your prompt attention to this matter.",
-     "We hope this message finds you well. According to our records, your payment has not yet been received. Please make the payment at your earliest convenience to avoid any late fees.":"We hope this message finds you well. According to our records, your payment has not yet been received. Please make the payment at your earliest convenience to avoid any late fees.",
+     "We hope this message finds you well. According to our records, your payment has not yet been received. Please make the payment at your earliest convenience to avoid any late fees.":
+     "We hope this message finds you well. According to our records, your payment has not yet been received. Please make the payment at your earliest convenience to avoid any late fees.",
      "If you have already made the payment, please disregard this notice.":"If you have already made the payment, please disregard this notice.",
-     "This is a second reminder that your payment still outstanding. We kindly request that you make the payment as soon as possible to avoid any late fees.":"This is a second reminder that your payment still outstanding. We kindly request that you make the payment as soon as possible to avoid any late fees.",
+     "This is a second reminder that your payment still outstanding. We kindly request that you make the payment as soon as possible to avoid any late fees.":
+     "This is a second reminder that your payment still outstanding. We kindly request that you make the payment as soon as possible to avoid any late fees.",
      "If you have any questions or concerns, please feel free to contact us.":"If you have any questions or concerns, please feel free to contact us."
 
     

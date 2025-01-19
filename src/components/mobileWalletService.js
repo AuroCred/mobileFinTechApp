@@ -47,6 +47,8 @@ export default function MobileWalletService({ route }) {
   const [serviceType, setserviceType] = useState(t("Mobile wallet"));
   const [serviceAccount, setserviceAccount] = useState("");
   const [open, setOpen] = useState(false);
+  const [fName, setfName] = useState("");
+  const [lName, setlName] = useState("");
   const [serviceName, setServiceName] = useState("E-Mola");
   const [items, setItems] = useState([
     { label: "E-Mola (Movitel)", value: "E-Mola" },
@@ -82,6 +84,8 @@ export default function MobileWalletService({ route }) {
           serviceType: serviceType,
           serviceName: serviceName,
           serviceAccount: serviceAccount,
+          fName: fName,
+          lName: lName,
         })
         .catch((error) => {
           alert("Error" + error);
@@ -299,77 +303,117 @@ export default function MobileWalletService({ route }) {
                   </View>
                 </TouchableOpacity>
               </View>
-              <View style={styles.closeModel}>
-                <View style={styles.bodyView}>
-                  <View style={styles.ContainerView}>
-                    <View style={styles.titleView}>
-                      <Text style={{ fontSize: 18, color: "#888" }}>
-                        {t("Service type")}
-                      </Text>
+              <ScrollView>
+                <View style={styles.closeModel}>
+                  <View style={styles.bodyView}>
+                    <View style={styles.ContainerView}>
+                      <View style={styles.titleView}>
+                        <Text style={{ fontSize: 18, color: "#888" }}>
+                          {t("First name")}
+                        </Text>
+                      </View>
+
+                      <View style={styles.inputTextView}>
+                        <TextInput
+                          value={fName}
+                          onChangeText={(value) => setfName(value)}
+                          style={{
+                            fontSize: 16,
+                            width: "100%",
+                            paddingLeft: 10,
+                          }}
+                        />
+                      </View>
+                    </View>
+                    <View style={styles.ContainerView}>
+                      <View style={styles.titleView}>
+                        <Text style={{ fontSize: 18, color: "#888" }}>
+                          {t("Last name")}
+                        </Text>
+                      </View>
+
+                      <View style={styles.inputTextView}>
+                        <TextInput
+                          value={lName}
+                          onChangeText={(value) => setlName(value)}
+                          style={{
+                            fontSize: 16,
+                            width: "100%",
+                            paddingLeft: 10,
+                          }}
+                        />
+                      </View>
                     </View>
 
-                    <View style={styles.inputView}>
-                      <Text style={{ fontSize: 18, width: "auto" }}>
-                        {serviceType}
-                      </Text>
-                    </View>
-                  </View>
+                    <View style={styles.ContainerView}>
+                      <View style={styles.titleView}>
+                        <Text style={{ fontSize: 18, color: "#888" }}>
+                          {t("Service type")}
+                        </Text>
+                      </View>
 
-                  <View style={styles.ContainerView}>
-                    <View style={styles.titleView}>
-                      <Text style={{ fontSize: 18, color: "#888" }}>
-                        {t("Service name")}
-                      </Text>
+                      <View style={styles.inputView}>
+                        <Text style={{ fontSize: 18, width: "auto" }}>
+                          {serviceType}
+                        </Text>
+                      </View>
+                    </View>
+
+                    <View style={styles.ContainerView}>
+                      <View style={styles.titleView}>
+                        <Text style={{ fontSize: 16, color: "#888" }}>
+                          {t("Service name")}
+                        </Text>
+                      </View>
+
+                      <View>
+                        <DropDownPicker
+                          open={open}
+                          value={serviceName}
+                          items={items}
+                          setOpen={setOpen}
+                          setValue={setServiceName}
+                          setItems={setItems}
+                          defaultValue={serviceName}
+                          listMode="SCROLLVIEW"
+                          style={styles.inputView}
+                          textStyle={{
+                            fontSize: 16,
+                            padding: 10,
+                          }}
+                          dropDownContainerStyle={{
+                            borderColor: "#DDDEE0",
+                            padding: 0,
+                            paddingBottom: 10,
+                          }}
+                        />
+                      </View>
                     </View>
 
                     <View>
-                      <DropDownPicker
-                        open={open}
-                        value={serviceName}
-                        items={items}
-                        setOpen={setOpen}
-                        setValue={setServiceName}
-                        setItems={setItems}
-                        defaultValue={serviceName}
-                        listMode="SCROLLVIEW"
-                        style={styles.inputView}
-                        textStyle={{
-                          fontSize: 18,
-                          padding: 10,
-                        }}
-                        dropDownContainerStyle={{
-                          borderColor: "#DDDEE0",
-                          padding: 0,
-                          paddingBottom: 10,
-                        }}
-                      />
+                      <View style={styles.titleView}>
+                        <Text style={{ fontSize: 18, color: "#888" }}>
+                          {t("Mobile account number")}
+                        </Text>
+                      </View>
+                      <View style={styles.phoneNumberView}>
+                        <Text style={{ fontSize: 18 }}>+258</Text>
+                        <TextInput
+                          onChangeText={(value) => setserviceAccount(value)}
+                          value={serviceAccount}
+                          keyboardType="numeric"
+                          maxLength={9}
+                          style={{
+                            fontSize: 16,
+                            width: "80%",
+                            paddingLeft: 5,
+                            padding: 15,
+                          }}
+                        />
+                      </View>
                     </View>
-                  </View>
 
-                  <View>
-                    <View style={styles.titleView}>
-                      <Text style={{ fontSize: 18, color: "#888" }}>
-                        {t("Mobile account number")}
-                      </Text>
-                    </View>
-                    <View style={styles.phoneNumberView}>
-                      <Text style={{ fontSize: 18 }}>+258</Text>
-                      <TextInput
-                        onChangeText={(value) => setserviceAccount(value)}
-                        value={serviceAccount}
-                        keyboardType="numeric"
-                        maxLength={9}
-                        style={{
-                          fontSize: 18,
-                          width: "80%",
-                          paddingLeft: 5,
-                          padding: 15,
-                        }}
-                      />
-                    </View>
-                  </View>
-
-                  {/* <TouchableOpacity
+                    {/* <TouchableOpacity
                       style={styleDepositMethod.saveButton}
                       onPress={() => saveNewWallet()}
                     >
@@ -385,8 +429,9 @@ export default function MobileWalletService({ route }) {
                         </Text>
                       </View>
                     </TouchableOpacity> */}
+                  </View>
                 </View>
-              </View>
+              </ScrollView>
             </KeyboardAvoidingView>
           </TouchableWithoutFeedback>
         </SafeAreaView>
@@ -470,6 +515,15 @@ const styles = StyleSheet.create({
 
   inputView: {
     padding: 15,
+    borderWidth: 1,
+    borderRadius: 5,
+    borderColor: "#DDDEE0",
+
+    backgroundColor: "#fff",
+  },
+
+  inputTextView: {
+    padding: 5,
     borderWidth: 1,
     borderRadius: 5,
     borderColor: "#DDDEE0",

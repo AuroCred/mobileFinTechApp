@@ -82,7 +82,11 @@ export default function ManageNotifications({ route }) {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(API_URL_Notification);
+      const response = await axios.get(API_URL_Notification, {
+        params: {
+          param: userId,
+        },
+      });
       const Data = response.data;
       setNotificationList(Data);
     } catch (error) {

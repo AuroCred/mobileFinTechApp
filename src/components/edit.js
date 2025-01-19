@@ -72,6 +72,8 @@ export default function Edit({ route, navigation }) {
   const editWallet = () => {
     axios
       .put(`${API_URL_WALL_ACCOUNT_LIST}/update/${id}`, {
+        fName: fName,
+        lName: lName,
         serviceName: serviceName,
         serviceAccount: serviceAccount,
       })
@@ -94,7 +96,7 @@ export default function Edit({ route, navigation }) {
         />
       ),
     });
-  }, [navigation, serviceAccount, serviceName]);
+  }, [navigation, serviceAccount, serviceName, fName, lName]);
 
   return (
     <View style={{ flex: 1, backgroundColor: "#F5F6F8" }}>

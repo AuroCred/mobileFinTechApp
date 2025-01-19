@@ -236,7 +236,16 @@ export default function SettingProfile({ route }) {
 }
 
 const stylesSettings = StyleSheet.create({
-  mainView: { padding: 0 },
+  mainView: {
+    ...Platform.select({
+      ios: {
+        paddingTop: 0,
+      },
+      android: {
+        paddingTop: 50,
+      },
+    }),
+  },
 
   iniNameView: {
     flexDirection: "row",

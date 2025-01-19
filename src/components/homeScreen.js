@@ -6,6 +6,7 @@ import {
   ScrollView,
   Animated,
   StatusBar,
+  Platform,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import CustomerAccount from "./customerAccount";
@@ -158,7 +159,14 @@ const styles = StyleSheet.create({
   },
 
   main: {
-    padding: 0,
+    ...Platform.select({
+      ios: {
+        paddingTop: 0,
+      },
+      android: {
+        paddingTop: 10,
+      },
+    }),
   },
 
   conteiners: {
